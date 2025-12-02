@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vote Exam Date</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th {
+      background: #f0f0f0;
+      padding: 8px;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    td.disabled {
+      background: #ffe0e0;
+      color: #aa0000;
+      font-weight: bold;
+    }
+
+    input[type="radio"] {
+      transform: scale(1.3);
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Select Your Preferred Exam Date</h2>
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+  <!-- JANUARY -->
+  <h3>January</h3>
+  <table>
+    <tr>
+      <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+    </tr>
+
+    <!-- Week of 26–30 Jan -->
+    <tr>
+      <td><label><input type="radio" name="date" value="26 Jan"> 26</label></td>
+      <td><label><input type="radio" name="date" value="27 Jan"> 27</label></td>
+      <td><label><input type="radio" name="date" value="28 Jan"> 28</label></td>
+
+      <!-- 29 January chemistry exam -->
+      <td class="disabled">29<br><small>Examen chimie</small></td>
+
+      <td><label><input type="radio" name="date" value="30 Jan"> 30</label></td>
+    </tr>
+  </table>
+
+  <!-- FEBRUARY -->
+  <h3>February</h3>
+  <table>
+    <tr>
+      <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+    </tr>
+
+    <!-- Week of 2–6 Feb -->
+    <tr>
+      <td><label><input type="radio" name="date" value="2 Feb"> 2</label></td>
+      <td><label><input type="radio" name="date" value="3 Feb"> 3</label></td>
+      <td><label><input type="radio" name="date" value="4 Feb"> 4</label></td>
+      <td><label><input type="radio" name="date" value="5 Feb"> 5</label></td>
+      <td><label><input type="radio" name="date" value="6 Feb"> 6</label></td>
+    </tr>
+
+    <!-- Week of 9–13 Feb -->
+    <tr>
+      <td><label><input type="radio" name="date" value="9 Feb"> 9</label></td>
+      <td><label><input type="radio" name="date" value="10 Feb"> 10</label></td>
+      <td><label><input type="radio" name="date" value="11 Feb"> 11</label></td>
+      <td><label><input type="radio" name="date" value="12 Feb"> 12</label></td>
+      <td><label><input type="radio" name="date" value="13 Feb"> 13</label></td>
+    </tr>
+  </table>
+
+  <button type="submit">Submit Vote</button>
+
+</form>
+
+</body>
+</html>
